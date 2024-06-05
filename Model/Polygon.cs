@@ -668,6 +668,8 @@ namespace EPPZ.Geometry.Model
 
 		public void Reverse()
 		{
+			Array.Reverse(_points);
+			Calculate();
 			// May be a feature later on (reverse `_points` using `System.Array.Copy()`.
 		}
 
