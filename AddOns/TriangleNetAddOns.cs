@@ -50,7 +50,7 @@ namespace EPPZ.Geometry.AddOns
 				});
 
 				// Add controur.
-				polygon.Add(new TriangleNet.Geometry.Contour(vertices.ToArray(), boundary));
+				polygon.Add(new TriangleNet.Geometry.Contour(vertices.ToArray(), boundary), eachPolygon.area < 0);
 
 				// Track.
 				boundary++;

@@ -91,7 +91,7 @@ namespace EPPZ.Geometry.AddOns
 		public static Vector2[] PointsFromClipperPath(Path path, float scale)
 		{
 			List<Vector2> points = new List<Vector2>();
-			for (int index = path.Count - 1; index >= 0; index--) // Reverse enumeration (to flip normals)
+			for (int index = 0; index < path.Count; index++)
 			{
 				IntPoint eachPoint = path[index];
 				points.Add(new Vector2(eachPoint.X / scale, eachPoint.Y / scale));
